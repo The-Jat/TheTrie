@@ -1,4 +1,6 @@
+#include <vector>
 #include <string>
+
 class TrieNode
 {
 public:
@@ -8,10 +10,14 @@ public:
 	TrieNode();
 };
 
-class Trie{
-	public:
-	TrieNode* root;
+class Trie
+{
+public:
+	TrieNode *root;
+
 	Trie();
 	void Insert(std::string);
+	void collectWords(TrieNode *, std::string, std::vector<std::string> &);
 
+	std::vector<std::string> getWords();
 };
